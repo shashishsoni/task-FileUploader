@@ -1,6 +1,6 @@
 # File Upload System
 
-A full-stack file upload application built with React and Node.js that allows users to upload files securely.
+A full-stack file upload application built with React and Node.js that allows users to upload files securely and view uploaded files.
 
 ## Features
 
@@ -10,6 +10,7 @@ A full-stack file upload application built with React and Node.js that allows us
 - 🎨 Modern and responsive UI
 - ⚡ Progress feedback
 - 🛡️ Error handling
+- 📋 Display of uploaded files
 
 ## Tech Stack
 
@@ -59,7 +60,7 @@ npm install
 
 2. Frontend Configuration:
    - The frontend runs on port 5173 by default (Vite)
-   - API endpoint is configured to `http://localhost:3000`
+   - API endpoint is configured to automatically use the correct URL based on the environment
 
 ## Running the Application
 
@@ -86,6 +87,8 @@ npm run dev
 3. Click "Upload" to start the upload process
 4. Wait for the upload to complete
 5. View the success/error message
+6. See your uploaded file in the "Recently Uploaded" section
+7. All previously uploaded files appear in the "All Uploaded Files" section
 
 ## Project Structure
 
@@ -93,16 +96,16 @@ npm run dev
 file-upload-system/
 ├── backend/
 │   ├── uploads/           # Upload directory
-│   ├── server.js         # Main server file
-│   ├── filecontroller.js # File handling logic
-│   ├── uploadroute.js    # Upload routes
+│   ├── server.js          # Main server file
+│   ├── filecontroller.js  # File handling logic
+│   ├── uploadroute.js     # Upload routes
 │   └── package.json
 │
 └── frontend/
     ├── src/
-    │   ├── App.jsx      # Main React component
-    │   ├── App.css      # Styles
-    │   └── main.jsx     # Entry point
+    │   ├── App.jsx       # Main React component
+    │   ├── App.css       # Styles
+    │   └── main.jsx      # Entry point
     ├── index.html
     └── package.json
 ```
@@ -114,6 +117,10 @@ file-upload-system/
 - Request: multipart/form-data
 - Field name: `myfile`
 - Returns: JSON with upload status and file path
+
+### GET /api/files
+- Retrieves a list of all uploaded files
+- Returns: JSON array of filenames
 
 ## Contributing
 
