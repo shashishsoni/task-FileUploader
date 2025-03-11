@@ -6,7 +6,9 @@ const http = require('http');
 
 const allowedOrigins = [
     'http://localhost:3000',
-    'http://localhost:5173'
+    'http://localhost:5173',
+    'https://task-fileuploader.onrender.com',
+    'https://task-file-uploader.vercel.app'
 ];
 
 // CORS configuration

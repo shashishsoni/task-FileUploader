@@ -19,7 +19,7 @@ function App() {
     formData.append('myfile', file);
 
     try {
-      const response = await axios.post('http://localhost:3000/api/upload', formData, {
+      const response = await axios.post('https://task-fileuploader.onrender.com/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
