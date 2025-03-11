@@ -48,12 +48,14 @@
   background-color: #f5f5f5;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: black;
 }
 
 .form-group {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+  color: black;
 }
 
 input[type="file"] {
@@ -62,6 +64,7 @@ input[type="file"] {
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: white;
+  color: black;
 }
 
 button {
